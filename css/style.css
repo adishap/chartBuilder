@@ -32,3 +32,8 @@
 .navbar-custom .icon-bar {
     background-color: #6DCCA8;
 }
+
+.dim-draggable, .mes-draggable {
+    z-index: 5;
+    cursor: pointer;
+}
