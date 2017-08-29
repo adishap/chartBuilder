@@ -6,6 +6,7 @@
     <title>Chart Builder</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -27,10 +28,74 @@
         </div>
     </nav>
     <div class="container">
-        yo
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <!-- Dimension Panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div id="select-dim" class="panel-body dim-droppable">
+                        <span data-value='brand' class="label label-primary dim-draggable">Brand</span>
+                        </br>
+                        <span data-value='category' class="dim-draggable label label-primary">Category</span>
+                        </br>
+                        <span data-value='style' class="dim-draggable label label-primary">Style</span>
+                        </br>
+                        <span data-value='size' class="dim-draggable label label-primary">Size</span>
+                        </br>
+                    </div>
+                </div>
+                <!-- Measurement Panel -->
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body mes-droppable" id="select-mes">
+                        <span class="label mes-draggable label-primary" data-value='orders'>Orders</span>
+                        <br/>
+                        <span data-value='sales' class="label mes-draggable label-primary">Sales</span>
+                        <br/>
+                        <span data-value='purchases' class="label mes-draggable label-primary">Purchases</span>
+                        <br/>
+                        <span data-value='Revenue' class="label mes-draggable label-primary">Revenue</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9 col-sm-9">
+                <!-- Dimension Choices -->
+                <div class="panel panel-default">
+                    <div class="panel-body dim-droppable" id="selected-dim">
+                        Dimension Choices
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <!-- Measurement Choices -->
+                        <div class="panel panel-default">
+                            <div class="panel-body mes-droppable" id="selected-mes">
+                                Measurement Choices
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10">
+                        <div>
+                            <div class="btn-group pull-right" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default">Pie Chart</button>
+                                <button type="button" class="btn btn-default">Bar Chart</button>
+                            </div>
+                        </div>
+                        <div>
+                            Graphs
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- Scripts -->
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
