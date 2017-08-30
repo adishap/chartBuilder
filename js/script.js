@@ -13,9 +13,11 @@ var Dragble = (function() {
                 var droppableId = $(this).attr("id");
                 // add filter to dimesion
                 if (droppableId === "selected-dim") {
-                    dimensions.push(draggableValue);
-                    // generate data for charts
-                    Data.generateData();
+                	if(dimensions.indexOf(draggableValue) === -1){
+	                    dimensions.push(draggableValue);
+    	                // generate data for charts
+        	            Data.generateData();
+                	}
                 }
                 // remove filter to dimension
                 if (droppableId === "select-dim") {
