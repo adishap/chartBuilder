@@ -7,6 +7,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/nv.d3.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -58,7 +59,7 @@
                         <br/>
                         <span data-value='purchases' class="label mes-draggable label-primary">Purchases</span>
                         <br/>
-                        <span data-value='Revenue' class="label mes-draggable label-primary">Revenue</span>
+                        <span data-value='revenue' class="label mes-draggable label-primary">Revenue</span>
                     </div>
                 </div>
             </div>
@@ -80,13 +81,16 @@
                     </div>
                     <div class="col-md-10">
                         <div>
-                            <div class="btn-group pull-right" role="group" aria-label="...">
-                                <button type="button" class="btn btn-default">Pie Chart</button>
-                                <button type="button" class="btn btn-default">Bar Chart</button>
+                            <div class="btn-group selected-chart pull-right" role="group" aria-label="...">
+                                <button type="button" data-chart="pie" class="btn active btn-default">Pie Chart</button>
+                                <button type="button" data-chart="bar" class="btn btn-default">Bar Chart</button>
                             </div>
                         </div>
-                        <div>
-                            Graphs
+                        <br>
+                        <div class="margin-top">
+                            <div id="chart">
+                                <svg></svg>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -97,6 +101,8 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/d3.min.js"></script>
+    <script type="text/javascript" src="js/nv.d3.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
 </body>
 
