@@ -14,6 +14,8 @@ var Dragble = (function() {
                 // add filter to dimesion
                 if (droppableId === "selected-dim") {
                     dimensions.push(draggableValue);
+                    // generate data for charts
+                    Data.generateData();
                 }
                 // remove filter to dimension
                 if (droppableId === "select-dim") {
@@ -49,7 +51,7 @@ var Dragble = (function() {
 
 // module to generate data
 var Data = (function() {
-	// will return data for pie chart according to selected filters
+    // will return data for pie chart according to selected filters
     var pieData = function() {
         var data = [];
         for (var i = pieChartData.length - 1; i >= 0; i--) {
@@ -60,7 +62,7 @@ var Data = (function() {
         return data;
     };
 
-	// will return data for bar chart according to selected filters
+    // will return data for bar chart according to selected filters
     var barData = function() {
         var data = [];
         for (var i = barChartData.length - 1; i >= 0; i--) {
@@ -86,21 +88,21 @@ var Data = (function() {
         }
     };
 
-	// will generate data for pie chart
+    // will generate data for pie chart
     var generatePieData = function(keys) {
         var data = [];
 
         for (var i = keys.length - 1; i >= 0; i--) {
             data.push({
                 label: keys[i],
-                value: Math.floor((Math.random() * 1000) + (100 * dimensions.length))
+                value: Math.floor((Math.random() * 1000) + (100))
             })
         }
 
         return data;
     };
 
-	// will generate data for bar chart
+    // will generate data for bar chart
     var generateBarData = function(keys) {
         var years = [2013, 2014, 2015, 2016, 2017];
         var data = [];
@@ -110,7 +112,7 @@ var Data = (function() {
             for (var j = 0; j < years.length; j++) {
                 values.push({
                     x: years[j],
-                    y: Math.floor((Math.random() * 400) + (100 * dimensions.length))
+                    y: Math.floor((Math.random() * 400) + (100))
                 })
             }
             data.push({
