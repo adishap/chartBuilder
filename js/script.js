@@ -107,7 +107,7 @@ var Data = (function() {
 
         for (var i = keys.length - 1; i >= 0; i--) {
             var values = [];
-            for (var j = years.length - 1; j >= 0; j--) {
+            for (var j = 0; j < years.length; j++) {
                 values.push({
                     x: years[j],
                     y: Math.floor((Math.random() * 400) + (100 * dimensions.length))
@@ -189,7 +189,7 @@ var Charts = (function() {
         var activeChart = $(".active", ".selected-chart").data().chart;
 
         // remove current plotted chart
-        $('#chart svg').html("");
+        $('#chart svg, .nvtooltip.xy-tooltip').html("");
         if (activeChart === "pie") {
             pieChart();
         } else {
