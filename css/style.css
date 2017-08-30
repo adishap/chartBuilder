@@ -107,3 +107,10 @@
     font-size: 11px;
     color: #ccc;
 }
+
+hr {
+    display: block;
+    border: solid 2px #2ec787 !important;
+    height: 0px !important;
+    margin: -0.5em 30% 1em 30%;
+}
