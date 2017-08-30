@@ -96,12 +96,12 @@
 
 .help-text {
     font-size: 11px;
-    color: #ccc;
+    color: #AAA;
 }
 
 hr {
     display: block;
     border: solid 2px #6cd7ab !important;
     height: 0px !important;
-    margin: -0.5em 30% 1em 30%;
+    margin: -0.5em 30% 35px 30%;
 }

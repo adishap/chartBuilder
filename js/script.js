@@ -190,8 +190,9 @@ var Charts = (function() {
         // get selected chart
         var activeChart = $(".active", ".selected-chart").data().chart;
 
-        // remove current plotted chart
-        $('#chart svg, .nvtooltip.xy-tooltip').html("");
+        // remove current plotted chart and tooltip
+        $('#chart svg').html("");
+        $(".nvtooltip").remove();
         if (activeChart === "pie") {
             pieChart();
         } else {
