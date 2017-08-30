@@ -1,6 +1,6 @@
 # chartBuilder
 
-An objective and transparent evaluation system based on the GTD philosophy.
+A report generator which generates reports in the form of bar chart and pie chart on changing filters. 
 
 ### Setup Instructions:
 * Clone the Repository
