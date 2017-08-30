@@ -68,11 +68,7 @@
     color: #fff;
 }
 
-.panel-default .dim-heading{
-    background-color: #f37a53;
-    color: #fff;
-}
-
+.panel-default .dim-heading,
 .panel-default .mes-heading {
     background-color: #2ebbc7;
     color: #fff;
@@ -89,12 +85,7 @@
     padding: 0px
 }
 
-#select-dim .label{
-    background-color: #f6a186;
-    color: #fff;
-}
-
-#select-mes .label{
+.label {
     background-color: #81d6dd;
     color: #fff;
 }
