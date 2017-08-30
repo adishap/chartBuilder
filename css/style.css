@@ -1,5 +1,5 @@
 .navbar-custom {
-    background-color: #ff9999;
+    background-color: #2ec787;
     color: #ffffff;
     border-radius: 0;
 }
@@ -22,7 +22,7 @@
 }
 
 .navbar-custom .navbar-brand {
-    color: #fff;
+    color: #000;
 }
 
 .navbar-custom .navbar-toggle {
@@ -45,4 +45,65 @@
 
 #chart svg {
     height: 400px;
+}
+
+#selected-mes {
+    height: 70vh;
+}
+
+#select-dim,
+#select-mes {
+    height: 32vh;
+}
+
+.btn-default.active,
+.btn-default.active:hover,
+.btn-default.active:active,
+.btn-default.active:active:focus,
+.btn-default:active:focus,
+.btn-default:active,
+.btn-default:hover,
+.btn-default:focus {
+    background-color: #2ec787;
+    color: #fff;
+}
+
+.panel-default .dim-heading{
+    background-color: #f37a53;
+    color: #fff;
+}
+
+.panel-default .mes-heading {
+    background-color: #2ebbc7;
+    color: #fff;
+}
+
+.panel-body .label {
+    font-size: 15px;
+    margin: 8px 15px;
+    display: block;
+}
+
+#select-dim,
+#select-mes {
+    padding: 0px
+}
+
+#select-dim .label{
+    background-color: #f6a186;
+    color: #fff;
+}
+
+#select-mes .label{
+    background-color: #81d6dd;
+    color: #fff;
+}
+
+.padding-right {
+    padding-right: 60px;
+}
+
+.help-text {
+    font-size: 11px;
+    color: #ccc;
 }
