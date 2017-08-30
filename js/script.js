@@ -11,15 +11,19 @@ var Dragble = (function() {
             drop: function(event, ui) {
                 var draggableValue = ui.draggable.attr("data-value");
                 var droppableId = $(this).attr("id");
+                // add filter to dimesion
                 if (droppableId === "selected-dim") {
                     dimensions.push(draggableValue);
                 }
+                // remove filter to dimension
                 if (droppableId === "select-dim") {
                     dimensions = dimensions.filter(function(a) { return a !== draggableValue });
                 }
+                // add filter to measurement
                 if (droppableId === "selected-mes") {
                     measurements.push(draggableValue);
                 }
+                // remove filter to measurement
                 if (droppableId === "select-mes") {
                     measurements = measurements.filter(function(a) { return a !== draggableValue });
                 }
@@ -45,6 +49,7 @@ var Dragble = (function() {
 
 // module to generate data
 var Data = (function() {
+	// will return data for pie chart according to selected filters
     var pieData = function() {
         var data = [];
         for (var i = pieChartData.length - 1; i >= 0; i--) {
@@ -55,6 +60,7 @@ var Data = (function() {
         return data;
     };
 
+	// will return data for bar chart according to selected filters
     var barData = function() {
         var data = [];
         for (var i = barChartData.length - 1; i >= 0; i--) {
@@ -80,6 +86,7 @@ var Data = (function() {
         }
     };
 
+	// will generate data for pie chart
     var generatePieData = function(keys) {
         var data = [];
 
@@ -93,6 +100,7 @@ var Data = (function() {
         return data;
     };
 
+	// will generate data for bar chart
     var generateBarData = function(keys) {
         var years = [2013, 2014, 2015, 2016, 2017];
         var data = [];
@@ -133,7 +141,8 @@ var Charts = (function() {
     var barChart = function() {
         nv.addGraph(function() {
             var chart = nv.models.multiBarChart()
-                .showControls(false);
+                .showControls(false)
+                .useInteractiveGuideline(true);
 
             chart.noData("Select dimensions and measurements to generate report.");
 
